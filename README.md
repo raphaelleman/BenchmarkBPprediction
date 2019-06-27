@@ -7,26 +7,54 @@
 This repository contains the data and scripts used for this study.
 Three sets of data were used: the Ensembl data, the RNAseq data and variant data. The scripts used to compare bioinformatics tools (HSF, SVM-BPfinder, BPP, Branchpointer, LaBranchoR and RNABPS) are in R language.
 
-## SCRIPTS
+## Installation and Usage
 
 To run these scripts, the following dependencies are needed:
 + R (v3.0 or later)
+```Bash
+sudo apt-get update
+sudo apt-get install r-base r-base-dev
+```
 + package 'ROCR'
+```R
+install.packages('ROCR')
+```
 + package 'gplots'
+```R
+install.packages('gplots')
+```
 + package 'ggplot2'
+```R
+install.packages('ggplot2')
+```
 + package 'VennDiagram'
+```R
+install.packages('VennDiagram')
+```
 
-The script [**studyEnsemblBPscore.r**](https://github.com/raphaelleman/benchmarkbpprediction/blob/master/scripts/studyEnsemblBPscore.r "tittle") is deicated to the Ensembl data and permits to perform:
+Download the repository and the Ensembl data
+```Bash
+git clone https://github.com/raphaelleman/BenchmarkBPprediction
+cd ./BenchmarkBPprediction
+#download Branch point data from Ensembl dataset
+wget https://mega.nz/#!C753GIKL!tspYhFUaNC6ZgUxwCnVV9bvFctRGjU-4Vtos_lZc1C4 -o ./data/ensemblBP.RData
+#Usage Example
+Rscript ./scripts/studyRNAseqBP.r
+```
+
+## SCRIPTS
+
+The script [**studyEnsemblBPscore.r**](https://github.com/raphaelleman/BenchmarkBPprediction/blob/master/scripts/studyEnsemblBPscore.r "tittle") is deicated to the Ensembl data and permits to perform:
 * ROC analysis
 * VENN diagram
 
-The script [**studyRNAseqBP.r**](https://github.com/raphaelleman/benchmarkbpprediction/blob/master/scripts/studyRNAseqBP.r "tittle") is deicated to the RNAseq data and permits to perform:
+The script [**studyRNAseqBP.r**](https://github.com/raphaelleman/BenchmarkBPprediction/blob/master/scripts/studyRNAseqBP.r "tittle") is deicated to the RNAseq data and permits to perform:
 * ROC analysis
 * VENN diagram
 * Boxplot expression according to presence or not of Branch point
 * Correlation expression and branch point score
 
-The script [**studyVariantBPscore.r**](https://github.com/raphaelleman/benchmarkbpprediction/blob/master/scripts/studyVariantBPscore.r "tittle") is deicated to the variant data and permits to perform:
+The script [**studyVariantBPscore.r**](https://github.com/raphaelleman/BenchmarkBPprediction/blob/master/scripts/studyVariantsBPscore.r "tittle") is deicated to the variant data and permits to perform:
 * Histogram of variant repartition
 * ROC analysis
 * Histogram of relatif repartition
