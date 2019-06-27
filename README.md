@@ -36,8 +36,11 @@ Download the repository and the Ensembl data
 ```Bash
 git clone https://github.com/raphaelleman/BenchmarkBPprediction
 cd ./BenchmarkBPprediction
-#download Branch point data from Ensembl dataset
-wget https://mega.nz/#!C753GIKL!tspYhFUaNC6ZgUxwCnVV9bvFctRGjU-4Vtos_lZc1C4 -o ./data/ensemblBP.RData
+```
+
+Download [Branch point data from Ensembl dataset](https://mega.nz/#!C753GIKL!tspYhFUaNC6ZgUxwCnVV9bvFctRGjU-4Vtos_lZc1C4 "tittle"). Then put it in the 'data' folder.
+
+```Bash
 #Usage Example
 Rscript ./scripts/studyRNAseqBP.r
 ```
